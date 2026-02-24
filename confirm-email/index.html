@@ -8,17 +8,18 @@
   <style>
     :root {
       --primary: #2563eb;
-      --text: #1f2937;
+      --success: #16a34a;
+      --text: #111827;
       --muted: #6b7280;
-      --bg: #f9fafb;
+      --bg: linear-gradient(135deg, #f9fafb, #eef2ff);
       --card: #ffffff;
-      --radius: 12px;
+      --radius: 14px;
     }
 
     * {
       box-sizing: border-box;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-        Roboto, Ubuntu, sans-serif;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont,
+        "Segoe UI", Roboto, Ubuntu, sans-serif;
     }
 
     body {
@@ -28,43 +29,72 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 16px;
+      padding: 20px;
     }
 
     .card {
       background: var(--card);
-      max-width: 420px;
+      max-width: 460px;
       width: 100%;
       border-radius: var(--radius);
-      padding: 36px 30px;
+      padding: 40px 34px;
       text-align: center;
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+      box-shadow:
+        0 30px 60px rgba(0, 0, 0, 0.12),
+        0 8px 20px rgba(0, 0, 0, 0.06);
     }
 
     .logo {
-      margin-bottom: 26px;
+      margin-bottom: 28px;
     }
 
     .logo img {
-      max-width: 160px;
+      max-width: 170px;
       height: auto;
+    }
+
+    .icon {
+      width: 56px;
+      height: 56px;
+      margin: 0 auto 18px;
+      border-radius: 50%;
+      background: rgba(22, 163, 74, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .icon svg {
+      width: 28px;
+      height: 28px;
+      color: var(--success);
     }
 
     h1 {
       color: var(--text);
-      font-size: 1.45rem;
+      font-size: 1.55rem;
       margin-bottom: 14px;
+      font-weight: 600;
     }
 
     p {
       color: var(--muted);
-      font-size: 0.95rem;
+      font-size: 0.98rem;
       line-height: 1.6;
       margin: 0;
     }
 
+    .divider {
+      margin: 28px auto 20px;
+      width: 60px;
+      height: 3px;
+      background: var(--primary);
+      border-radius: 999px;
+      opacity: 0.2;
+    }
+
     .note {
-      margin-top: 22px;
+      margin-top: 18px;
       font-size: 0.85rem;
       color: var(--muted);
     }
@@ -77,17 +107,25 @@
       <img src="../assets/Logo_400x400.png" alt="Firetool logo" />
     </div>
 
+    <!-- ÍCONE DE SUCESSO -->
+    <div class="icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M20 6L9 17l-5-5" />
+      </svg>
+    </div>
+
     <!-- TEXTO -->
-    <h1>Conta confirmada com sucesso 🎉</h1>
+    <h1>Conta confirmada com sucesso</h1>
     <p>
-      Sua conta foi confirmada com sucesso.<br />
-      Agora, retorne ao aplicativo e realize o login.
+      Sua conta foi confirmada e já está pronta para uso.<br />
+      Retorne ao aplicativo e realize o login para continuar.
     </p>
 
+    <div class="divider"></div>
+
     <div class="note">
-      Você já pode fechar esta página.
+      Você pode fechar esta página com segurança.
     </div>
   </div>
 </body>
-
 </html>
